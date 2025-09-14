@@ -1,0 +1,146 @@
+/* =========================================================
+   Resume PDF – Print‑optimised CSS
+   ---------------------------------------------------------
+   • Letter page, Times New Roman fallback to sans‑serif
+   • Flex utility “.between” for inline left / right
+   • Bullets are justified; headings centred with bottom rule
+   ========================================================= */
+
+/* ---------- 1.  Page & root variables ---------- */
+@page {
+  /* Margins are injected by Jinja via CSS variables */
+  size: Letter;
+  margin: var(--margin-top) var(--margin-right)
+          var(--margin-bottom) var(--margin-left);
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Arial, sans-serif */
+  font-weight: 500;
+  font-size: var(--base-font);
+  line-height: 1.2;
+  color: #000;
+  text-rendering: optimizeLegibility;   /*  nicer curves in print */
+  -webkit-font-smoothing: antialiased; /* smoother on‑screen preview */
+  /* letter-spacing: 0.03em;   0.03em ≈ 3 % of font size */
+  font-synthesis: none;
+  /* font-variant-ligatures: common-ligatures; */
+}
+
+/* ---------- 2.  Headings ---------- */
+h1 {
+  font-size: calc(var(--base-font) * 2);
+  margin: 0 0 2px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: calc(var(--base-font) * 1.2);
+  margin: 8px 0 4px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h4 {     
+  /*text-align: center;                section label underlines */
+  margin: 8px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid #000;
+}
+
+/* ---------- 3.  Header block ---------- */
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#header .contact-line {
+  margin: 2px 0;
+  text-align: center;
+}
+
+#header .contact-line a {
+  color: inherit;
+  text-decoration: none;
+}
+/* ---------- 3.  Summary block ---------- */
+
+.summary {
+  margin: 4px 0 8px;
+  text-align: justify;  /* looks tidy */
+}
+
+/* ---------- 4.  Paragraphs & lists ---------- */
+p,
+li {
+  margin: 0 0 3px;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding-left: 1.4em;         /*  room for bullet */
+  list-style: disc outside;
+}
+
+li {
+  list-style: inherit;
+  text-align: left;
+  text-align-last: left;        /* last line flush left */
+}
+
+.skills{
+  margin: 0 0 4px;
+  padding-left: 1.4em;          /* room for bullet */
+  list-style: disc outside;
+}
+
+/* Extra breathing room between bullets */
+li:not(:last-child) {
+  margin-bottom: 6px;   /* ← adjust value to taste */
+}
+
+/* ---------- 5.  Flex utility for inline labels ---------- */
+.between {
+  display: flex;
+  justify-content: space-between;   /* left item / right item */
+}
+
+/* ---------- 6.  Micro‑spacing tweaks ---------- */
+.role-line ~ .role-line { margin-top: 10px; }
+.company-line{ margin-bottom: 8px; }
+.education-line{ margin-bottom: 4px; }
+.section     { margin: 0 0 10px; }
+
+/* ---------- 7.  Emphasis classes ---------- */
+.project-title,
+/* .degree, */
+.role,
+.school,
+.dates {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.left {
+  display: inline;
+}
+/* .company{
+  font-style: italic;
+} */
+
+.dates,
+.location {
+  text-align: right;
+}
+
+/* ---------- 8.  Print‑specific fine‑tuning ---------- */
+@media print {
+  .xp-list { padding-left: 1.6em; }
+  ul { margin-bottom: 2px; }
+  li { margin-bottom: 1px; }
+}

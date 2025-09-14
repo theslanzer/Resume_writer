@@ -1,0 +1,73 @@
+/* Regular 400 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Italic 400 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Semibold 600 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Semibold Italic 600 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-SemiboldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold 700 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic 700 */
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../../fonts/libertinus-serif/LibertinusSerif-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* EB Garamond — self-hosted */
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond/EBGaramond-Regular.ttf") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond/EBGaramond-Italic.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond/EBGaramond-Medium.ttf") format("truetype"); font-weight:500; font-style:normal; font-display:swap; }
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond/EBGaramond-MediumItalic.ttf") format("truetype"); font-weight:500; font-style:italic; font-display:swap; }
+
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-SemiBold.ttf") format("truetype"); font-weight:600; font-style:normal; font-display:swap; }
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-SemiBoldItalic.ttf") format("truetype"); font-weight:600; font-style:italic; font-display:swap; }
+
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-Bold.ttf") format("truetype"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-BoldItalic.ttf") format("truetype"); font-weight:700; font-style:italic; font-display:swap; }
+
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-ExtraBold.ttf") format("truetype"); font-weight:800; font-style:normal; font-display:swap; }
+@font-face { font-family:"EB Garamond"; src:url("../../fonts/Garamond//fonts/EBGaramond-ExtraBoldItalic.ttf") format("truetype"); font-weight:800; font-style:italic; font-display:swap; }
+
+
+/* Apply it globally */
+html, body {
+  font-family: "EB Garamond", Garamond;
+  font-weight: 400;
+  font-synthesis: none;          /* don’t fake bold/italic */
+  -webkit-font-smoothing: antialiased;
+}

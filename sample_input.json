@@ -1,0 +1,47 @@
+{
+  "header": {
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "phone": "+1 (555) 123-4567",
+    "email": "janddoe@gmail.com",
+    "address": "123 Main St, Boston, MA",
+    "linkedin": "https://www.linkedin.com/in/janedoe",
+    "github": "https://github.com/janedoe"
+  },
+  "experience": [
+    {
+      "role": "Senior Data Analyst",
+      "start_date": "Feb 2022",
+      "end_date": "Present",
+      "company": "Acme Corp",
+      "location": "Remote",
+      "bullets": [
+        "Built KPI dashboards in Power BI consumed by 50+ stakeholders.",
+        "Automated SQL pipelines reducing refresh time by 40%."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Marketing Attribution Engine",
+      "bullets": [
+        "Implemented multi-touch attribution in Python with scikit-learn.",
+        "Improved ROAS prediction accuracy by 18%."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "SQL", "R"],
+    "tools": ["Power BI", "Tableau", "Snowflake"],
+    "competencies": ["A/B testing", "Causal inference", "Data storytelling"]
+  },
+  "education": [
+    {
+      "degree": "M.S. Business Analytics",
+      "start_date": "Aug 2020",
+      "end_date": "May 2021",
+      "school": "Simon Business School, University of Rochester",
+      "location": "Rochester, NY"
+    }
+  ]
+}

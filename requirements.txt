@@ -1,0 +1,6 @@
+jinja2        # HTML→PDF (uses headless CSS layout)
+pydantic>=2.0             # JSON validation
+click                     # nice CLI
+PyMuPDF                   # page counting / height checks
+playwright
+language_tool_python

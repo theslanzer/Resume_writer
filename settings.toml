@@ -1,0 +1,17 @@
+[defaults]
+start_font        = 12.0
+min_font          = 9.0
+max_font          = 12.0
+font_step         = 0.5
+
+base_margin_max   = 0.50
+base_margin_min   = 0.20
+header_offset     = 0.05
+margin_step       = 0.05
+
+
+font_family       = "Times New Roman"
+
+[paths]
+output_dir        = "D:/Documents/Generated Resumes"
+debug_dir         = "debug_attempts"

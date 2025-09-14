@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ full_name }} – Resume</title>
+<link rel="stylesheet" href="style.css">
+<link rel="font" href="fonts.css">
+<style>
+:root{
+  --base-font: {{ font_size }}pt;
+  --margin-top: {{ margin_top }}in;
+  --margin-bottom: {{ margin_bottom }}in;
+  --margin-left: {{ margin_left }}in;
+  --margin-right: {{ margin_right }}in;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+    
+{% if header %}
+<header id="header">
+  <h1>{{ full_name }}</h1>
+  <p class="contact-line">
+    {% if header.phone %}<a href="tel:{{ header.phone|replace(' ', '') }}">{{ header.phone }}</a>{% endif %}
+    {% if header.email %} | <a href="mailto:{{ header.email }}">{{ header.email }}</a>{% endif %}
+    {% if header.address %} | {{ header.address }}{% endif %}
+    {% if header.linkedin %} | <a href="{{ header.linkedin }}">linkedin.com/in/shaswotjoshi</a>{% endif %}
+    {% if header.github %} | <a href="{{ header.github }}">{{ header.github }}</a>{% endif %}
+  </p>
+</header>
+{% endif %}
+
+<!-- Summary -->
+
+{% if summary %}
+<section>
+  <h4>professional summary</h4>
+  <p class="summary">{{summary}}</p>
+</section>
+{% endif %}
+
+<!-- Skills -->
+
+{% if skills %}
+<section>
+  <h4>skills</h4>
+  <ul class="skills">
+    {% if skills.languages %}<strong><li>Languages:</strong> {{ skills.languages|join(', ') }}</li>{% endif %}
+    {% if skills.data_viz %}<strong><li>Data Visualization:</strong> {{ skills.data_viz|join(', ') }}</li>{% endif %}
+    {% if skills.ai_tools %}<strong><li>AI/ML Tools:</strong> {{ skills.ai_tools|join(', ') }}</li>{% endif %}
+    {% if skills.cloud_tools %}<strong><li>Cloud Platforms:</strong> {{ skills.cloud_tools|join(', ') }}</li>{% endif %}
+    {% if skills.competencies %}<strong><li>Competencies:</strong> {{ skills.competencies|join(', ') }}</li>{% endif %}
+  </ul>
+</section>
+{% endif %}
+
+<!-- Experience -->
+
+{% if experience and experience|length > 0 %}
+<section>
+  <h4>professional experience</h4>
+  {% for exp in experience %}
+  <div class="role-line between">
+    <span class="role">{{ exp.role }}</span>
+    {% if exp.start_date %}<span class="dates">{{ exp.start_date }} – {{ exp.end_date or "Present" }}</span>{% endif %}
+  </div>
+  <div class="company-line between">
+    <span class="company">{{ exp.company }}</span>
+    {% if exp.location %}<span class="location">{{ exp.location }}</span>{% endif %}
+  </div>
+  {% if exp.bullets and exp.bullets|length > 0 %}
+  <ul>
+    {% for b in exp.bullets %}
+    <li>{{ b }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endif %}
+
+<!-- projects -->
+
+{% if projects and projects|length > 0 %}
+<section>
+  <h4>projects</h4>
+  {% for p in projects %}
+  <div class="project-title">{{ p.title }}</div>
+  {% if p.bullets and p.bullets|length > 0 %}
+  <ul>
+    {% for b in p.bullets %}
+    <li>{{ b }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endif %}
+
+<!-- Education -->
+
+{% if education and education|length > 0 %}
+<section>
+  <h4>education</h4>
+  {% for edu in education %}
+  <div class="education-line between">
+      <span class="school"> {{ edu.school }}</span>
+    {% if edu.end_date %}<span class="dates"> {{ edu.end_date }}</span>{% endif %}
+  </div>
+  <div class="role-line between">
+    <span class="degree">{{ edu.degree }}</span>
+    {% if edu.location %}<span class="location">{{ edu.location }}</span>{% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+</body>
+</html>
