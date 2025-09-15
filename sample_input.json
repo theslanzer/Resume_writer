@@ -10,7 +10,7 @@
   },
   "experience": [
     {
-      "role": "Senior Data Analyst",
+      "role": "Role",
       "start_date": "Feb 2022",
       "end_date": "Present",
       "company": "Acme Corp",
@@ -37,11 +37,11 @@
   },
   "education": [
     {
-      "degree": "M.S. Business Analytics",
+      "degree": "M.S. Degree",
       "start_date": "Aug 2020",
       "end_date": "May 2021",
-      "school": "Simon Business School, University of Rochester",
-      "location": "Rochester, NY"
+      "school": "University Name",
+      "location": "New York, NY"
     }
   ]
 }

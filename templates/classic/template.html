@@ -26,7 +26,7 @@
     {% if header.phone %}<a href="tel:{{ header.phone|replace(' ', '') }}">{{ header.phone }}</a>{% endif %}
     {% if header.email %} | <a href="mailto:{{ header.email }}">{{ header.email }}</a>{% endif %}
     {% if header.address %} | {{ header.address }}{% endif %}
-    {% if header.linkedin %} | <a href="{{ header.linkedin }}">linkedin.com/in/shaswotjoshi</a>{% endif %}
+    {% if header.linkedin %} | <a href="{{ header.linkedin }}"> {{ header.linkedin }}</a>{% endif %} 
     {% if header.github %} | <a href="{{ header.github }}">{{ header.github }}</a>{% endif %}
   </p>
 </header>
