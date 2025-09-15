@@ -126,6 +126,14 @@ li:not(:last-child) {
   font-weight: 700;
 }
 
+.project-head{ 
+  display:inline-flex; align-items:baseline; 
+}
+
+.project-skills { 
+  margin-left: 4px; 
+}
+
 .left {
   display: inline;
 }

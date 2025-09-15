@@ -50,7 +50,7 @@
     {% if skills.languages %}<strong><li>Languages:</strong> {{ skills.languages|join(', ') }}</li>{% endif %}
     {% if skills.data_viz %}<strong><li>Data Visualization:</strong> {{ skills.data_viz|join(', ') }}</li>{% endif %}
     {% if skills.ai_tools %}<strong><li>AI/ML Tools:</strong> {{ skills.ai_tools|join(', ') }}</li>{% endif %}
-    {% if skills.cloud_tools %}<strong><li>Cloud Platforms:</strong> {{ skills.cloud_tools|join(', ') }}</li>{% endif %}
+    {% if skills.cloud_tools %}<strong><li>Cloud & Data:</strong> {{ skills.cloud_tools|join(', ') }}</li>{% endif %}
     {% if skills.competencies %}<strong><li>Competencies:</strong> {{ skills.competencies|join(', ') }}</li>{% endif %}
   </ul>
 </section>
@@ -87,7 +87,12 @@
 <section>
   <h4>projects</h4>
   {% for p in projects %}
-  <div class="project-title">{{ p.title }}</div>
+  <div class="project-head">
+    <span class="project-title">{{ p.title }}</span>
+    {% if p.skills %}
+      <span class="project-skills">  | {{ p.skills|join(', ') }}</span>
+    {% endif %}
+  </div>
   {% if p.bullets and p.bullets|length > 0 %}
   <ul>
     {% for b in p.bullets %}

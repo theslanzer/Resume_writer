@@ -20,6 +20,7 @@ class ExperienceItem(BaseModel):
 
 class ProjectItem(BaseModel):
     title: str
+    skills: Optional[List[str]] = None
     bullets: Optional[List[str]] = None
 
 class Skills(BaseModel):
