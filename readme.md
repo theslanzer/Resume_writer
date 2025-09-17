@@ -60,7 +60,7 @@ pip install -r requirements.txt
 python -m playwright install chromium
 
 # 3) generate your first PDF
-python -m res_generator.cli -i sample_input.json -co parafin --debug-dump
+python -m res_generator.cli -i sample_input.json -co test --debug-dump #Create your Input JSON and replace sample_input.json here
 
 Output lands in C:/Documents/Generated Resumes (see settings.toml).
 ```
